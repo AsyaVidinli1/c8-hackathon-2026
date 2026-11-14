@@ -1,7 +1,7 @@
 // Which sub-screen of the AI Advisor tab is active, and the insight severity filter
 // for the Insights feed. Executive Assistant keeps its last-picked question so the
 // answer stays visible after a language switch or nav round-trip.
-var currentAiView = "insights";
+var currentAiView = "live";
 var currentInsightFilter = "all";
 var currentAssistantQuestion = null;
 
@@ -9,6 +9,7 @@ var currentAssistantQuestion = null;
 
 function renderAiAdvisor() {
   var user = getCurrentUser();
+  if (currentAiView === "live") { renderLiveAdvisor(user); return; }
   if (currentAiView === "actions") { renderSuggestedActions(user); return; }
   if (currentAiView === "assistant") { renderExecutiveAssistant(user); return; }
   if (currentAiView === "brief") { renderHealthBrief(user); return; }
@@ -22,9 +23,10 @@ function switchAiView(view) {
 
 function aiSubnav() {
   var tabs = [
+    ["live", state.lang === "tr" ? "Şirket Asistanı · AI" : "Company Assistant · AI"],
     ["insights", t("aitab_insights")],
     ["actions", t("aitab_actions")],
-    ["assistant", t("aitab_assistant")],
+    ["assistant", state.lang === "tr" ? "Hızlı Kontroller · Kurallar" : "Quick Checks · Rules"],
     ["brief", t("aitab_brief")],
   ];
   var buttons = tabs.map(function (entry) {
@@ -193,8 +195,8 @@ function renderExecutiveAssistant(user) {
   if (history.length === 0) html += `<div class="empty-state">${t("empty_no_assistant_history")}</div>`;
   history.forEach(function (q) {
     html += `<div class="card">
-      <div class="p-name">${q.questionText}</div>
-      <div class="p-title" style="margin-top:4px">${q.answerText}</div>
+      <div class="p-name">${escapeHtml(q.questionText)}</div>
+      <div class="p-title" style="margin-top:4px">${escapeHtml(q.answerText)}</div>
       <div class="dim-text" style="margin-top:6px">${formatDateTime(q.askedAt)}</div>
     </div>`;
   });

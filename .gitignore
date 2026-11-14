@@ -14,5 +14,7 @@ data/*.db-*
 .DS_Store
 Thumbs.db
 *.log
+__pycache__/
+*.pyc
 .vscode/
 .idea/

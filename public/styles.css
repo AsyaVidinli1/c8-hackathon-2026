@@ -160,3 +160,16 @@
     .main{padding:18px 16px}
     .topbar-user{display:none}
   }
+/* Connected demo and source-backed assistant */
+.backend-status{position:fixed;bottom:12px;right:16px;z-index:1000;padding:8px 14px;background:#14332c;color:#fff;border-radius:8px;font-size:12px;max-width:85vw;box-shadow:0 2px 12px #0002}
+.backend-error{background:#8a2533}
+.demo-session-label{font-size:10px;letter-spacing:.04em;color:#746147;text-align:center;margin-bottom:14px}
+.advisor-examples{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.advisor-answer{white-space:pre-wrap;line-height:1.7;margin:14px 0;color:var(--ink)}
+.advisor-result{border-left:3px solid var(--gold)}
+.advisor-sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.source-card{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:9px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface,#fff);color:var(--ink);cursor:pointer}
+.source-card:hover{border-color:var(--gold)}
+.source-card span:last-child{font-size:12px;color:var(--ink-2)}
+.source-content{white-space:pre-wrap;overflow-wrap:anywhere;font-family:inherit;font-size:13px;line-height:1.6;max-height:55vh;overflow:auto;margin:16px 0}
+button:disabled{opacity:.6;cursor:wait}

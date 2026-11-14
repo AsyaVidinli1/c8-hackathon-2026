@@ -14,12 +14,12 @@ function renderAyarlar() {
     <div class="section-head"><h2>${t("section_ai_settings")}</h2></div>
     <div class="card">
       <div class="field-block">
-        <div class="lbl">${t("label_llm_provider")}</div>
+        <div class="lbl">${state.lang === 'tr' ? 'Canlı AI modeli · Sunucuda yapılandırılır' : 'Live AI model · Configured on server'}</div>
         <div class="val">
           <select class="text-input" id="f-ai-provider" style="margin-top:4px" disabled>
-            <option value="anthropic" selected>Anthropic Claude</option>
+            <option value="anthropic" selected>anthropic/claude-haiku-5.5</option>
           </select>
-          <div class="dim-text" style="margin-top:4px">${t("notice_llm_provider_inactive")}</div>
+          <div class="dim-text" style="margin-top:4px">${state.lang === 'tr' ? 'Şirket Asistanı gerçek model kullanır. Diğer analizler ve taslaklar kural tabanlıdır.' : 'Company Assistant uses the live model. Other analyses and drafts remain rule based.'}</div>
         </div>
       </div>
       <div class="field-block">

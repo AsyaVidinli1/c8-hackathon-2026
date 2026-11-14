@@ -1,0 +1,694 @@
+{
+  "lang": "tr",
+  "company": {
+    "name": {
+      "tr": "Örnek Aile Şirketi A.Ş.",
+      "en": "Example Family Company Ltd."
+    },
+    "scorecardFrequency": "quarterly"
+  },
+  "currentUserId": null,
+  "users": [
+    {
+      "id": "u-tunc",
+      "name": "Tunç Vidinli",
+      "email": "tunc@veliahtakademi.com",
+      "role": "patron",
+      "title": {
+        "tr": "Şirket Sahibi",
+        "en": "Company owner"
+      },
+      "departmentId": null,
+      "managerId": null
+    },
+    {
+      "id": "u-murat",
+      "name": "Murat Çelik",
+      "email": "murat@ornekfirma.com",
+      "role": "mudur",
+      "title": {
+        "tr": "Satış Müdürü",
+        "en": "Sales manager"
+      },
+      "departmentId": "dep-satis",
+      "managerId": "u-tunc"
+    },
+    {
+      "id": "u-fatma",
+      "name": "Fatma Kaya",
+      "email": "fatma@ornekfirma.com",
+      "role": "mudur",
+      "title": {
+        "tr": "Operasyon Müdürü",
+        "en": "Operations manager"
+      },
+      "departmentId": "dep-operasyon",
+      "managerId": "u-tunc"
+    },
+    {
+      "id": "u-selin",
+      "name": "Selin Arslan",
+      "email": "selin@ornekfirma.com",
+      "role": "mudur",
+      "title": {
+        "tr": "İK Müdürü",
+        "en": "HR manager"
+      },
+      "departmentId": "dep-ik",
+      "managerId": "u-tunc"
+    },
+    {
+      "id": "u-ahmet",
+      "name": "Ahmet Yıldız",
+      "email": "ahmet@ornekfirma.com",
+      "role": "calisan",
+      "title": {
+        "tr": "Satış Temsilcisi",
+        "en": "Sales representative"
+      },
+      "departmentId": "dep-satis",
+      "managerId": "u-murat"
+    },
+    {
+      "id": "u-zeynep",
+      "name": "Zeynep Kara",
+      "email": "zeynep@ornekfirma.com",
+      "role": "calisan",
+      "title": {
+        "tr": "Satış Temsilcisi",
+        "en": "Sales representative"
+      },
+      "departmentId": "dep-satis",
+      "managerId": "u-murat"
+    }
+  ],
+  "departments": [
+    {
+      "id": "dep-satis",
+      "name": {
+        "tr": "Satış",
+        "en": "Sales"
+      },
+      "managerId": "u-murat"
+    },
+    {
+      "id": "dep-operasyon",
+      "name": {
+        "tr": "Operasyon",
+        "en": "Operations"
+      },
+      "managerId": "u-fatma"
+    },
+    {
+      "id": "dep-ik",
+      "name": {
+        "tr": "İnsan Kaynakları",
+        "en": "Human resources"
+      },
+      "managerId": "u-selin"
+    }
+  ],
+  "roleCards": {
+    "u-ahmet": {
+      "mission": "Bölgesindeki müşteri ilişkilerini yönetmek ve aylık satış hedefinden bireysel olarak sorumlu olmak.",
+      "responsibilities": [
+        "Günlük müşteri aramaları yapmak",
+        "Teklif hazırlamak ve takip etmek",
+        "CRM sistemini güncel tutmak",
+        "Haftalık ziyaret raporu hazırlamak"
+      ],
+      "authorities": "Müşterilerle rutin ziyaret planı yapabilir.",
+      "decisionRights": "%5'e kadar indirim uygulayabilir.",
+      "approvalRules": "%5 üzeri indirim için Müdür onayı, yeni müşteri sözleşmesi için yazılı onay.",
+      "collaborations": [
+        {
+          "with": "Fiyatlama",
+          "freq": "Haftada 2 kez"
+        },
+        {
+          "with": "Operasyon",
+          "freq": "Günlük"
+        }
+      ],
+      "status": "active",
+      "updated": "15.03.2026"
+    },
+    "u-murat": {
+      "mission": "Satış departmanının aylık ciro hedefinden ve ekip performansından sorumlu olmak.",
+      "responsibilities": [
+        "Haftalık ekip toplantısı yönetmek",
+        "Aylık satış raporunu Patron'a sunmak",
+        "Ekibin KPI takibini yapmak"
+      ],
+      "authorities": "Ekip içi görev dağılımı yapabilir.",
+      "decisionRights": "%15'e kadar indirim onaylayabilir.",
+      "approvalRules": "Yeni personel alımı için Patron onayı, %15 üzeri indirim için Patron onayı.",
+      "collaborations": [
+        {
+          "with": "Patron",
+          "freq": "Haftalık"
+        },
+        {
+          "with": "Operasyon Müdürü",
+          "freq": "Haftalık"
+        }
+      ],
+      "status": "active",
+      "updated": "10.03.2026"
+    }
+  },
+  "tasks": [
+    {
+      "id": "t1",
+      "employeeId": "u-ahmet",
+      "title": {
+        "tr": "ABC Ltd. teklifi hazırla",
+        "en": "Prepare the ABC Ltd. proposal"
+      },
+      "description": "",
+      "due": {
+        "tr": "Bugün 17:00",
+        "en": "Today 5:00 PM"
+      },
+      "dueAt": null,
+      "status": "todo",
+      "priority": "high",
+      "source": "manual",
+      "sourceId": null,
+      "createdAt": null
+    },
+    {
+      "id": "t2",
+      "employeeId": "u-ahmet",
+      "title": {
+        "tr": "Deniz A. müşteri araması",
+        "en": "Call customer Deniz A."
+      },
+      "description": "",
+      "due": {
+        "tr": "Yarın 10:00",
+        "en": "Tomorrow 10:00 AM"
+      },
+      "dueAt": null,
+      "status": "todo",
+      "priority": "medium",
+      "source": "manual",
+      "sourceId": null,
+      "createdAt": null
+    },
+    {
+      "id": "t3",
+      "employeeId": "u-zeynep",
+      "title": {
+        "tr": "Haftalık ziyaret raporu",
+        "en": "Weekly visit report"
+      },
+      "description": "",
+      "due": {
+        "tr": "Cuma 16:00",
+        "en": "Friday 4:00 PM"
+      },
+      "dueAt": null,
+      "status": "todo",
+      "priority": "medium",
+      "source": "manual",
+      "sourceId": null,
+      "createdAt": null
+    },
+    {
+      "id": "t4",
+      "employeeId": "u-murat",
+      "title": {
+        "tr": "Q3 hedef revizyonunu departmanlara ilet",
+        "en": "Communicate the Q3 target revision to departments"
+      },
+      "description": "",
+      "due": {
+        "tr": "10 Temmuz",
+        "en": "July 10"
+      },
+      "dueAt": "2026-07-10",
+      "status": "todo",
+      "priority": "high",
+      "source": "meeting",
+      "sourceId": "mo-2",
+      "createdAt": "2026-06-29T09:00:00"
+    },
+    {
+      "id": "t5",
+      "employeeId": "u-zeynep",
+      "title": {
+        "tr": "Haziran ayı stok sayımı",
+        "en": "June stock count"
+      },
+      "description": "",
+      "due": {
+        "tr": "20 Haziran",
+        "en": "June 20"
+      },
+      "dueAt": "2026-06-20",
+      "status": "todo",
+      "priority": "medium",
+      "source": "manual",
+      "sourceId": null,
+      "createdAt": "2026-06-01T09:00:00"
+    }
+  ],
+  "meetingTemplates": [
+    {
+      "id": "m1",
+      "name": {
+        "tr": "Haftalık Yönetim Kurulu",
+        "en": "Weekly management board"
+      },
+      "category": "board",
+      "freq": {
+        "tr": "Haftalık · Pazartesi 09:00",
+        "en": "Weekly · Monday 9:00 AM"
+      },
+      "duration": {
+        "tr": "60 dk",
+        "en": "60 min"
+      },
+      "departmentId": null,
+      "participantIds": [
+        "u-tunc",
+        "u-murat",
+        "u-fatma",
+        "u-selin"
+      ]
+    },
+    {
+      "id": "m2",
+      "name": {
+        "tr": "Satış Değerlendirme",
+        "en": "Sales review"
+      },
+      "category": "weekly_review",
+      "freq": {
+        "tr": "Haftalık · Salı 14:00",
+        "en": "Weekly · Tuesday 2:00 PM"
+      },
+      "duration": {
+        "tr": "30 dk",
+        "en": "30 min"
+      },
+      "departmentId": "dep-satis",
+      "participantIds": [
+        "u-murat",
+        "u-ahmet",
+        "u-zeynep"
+      ]
+    },
+    {
+      "id": "m3",
+      "name": {
+        "tr": "Sabah Ekip Toplantısı",
+        "en": "Morning team meeting"
+      },
+      "category": "daily_standup",
+      "freq": {
+        "tr": "Her gün 09:00",
+        "en": "Daily · 9:00 AM"
+      },
+      "duration": {
+        "tr": "15 dk",
+        "en": "15 min"
+      },
+      "departmentId": "dep-satis",
+      "participantIds": [
+        "u-murat",
+        "u-ahmet",
+        "u-zeynep"
+      ]
+    }
+  ],
+  "meetingOccurrences": [
+    {
+      "id": "mo-1",
+      "templateId": "m2",
+      "title": "Satış Değerlendirme",
+      "category": "weekly_review",
+      "departmentId": "dep-satis",
+      "participantIds": [
+        "u-murat",
+        "u-ahmet",
+        "u-zeynep"
+      ],
+      "scheduledAt": "2026-07-08T14:00:00",
+      "status": "scheduled",
+      "ownerId": "u-murat",
+      "createdBy": "u-murat",
+      "notes": "",
+      "agendaItems": [
+        {
+          "id": "ai-1",
+          "title": "Haftalık satış rakamlarının gözden geçirilmesi",
+          "timeboxMin": 15,
+          "order": 1
+        },
+        {
+          "id": "ai-2",
+          "title": "Açık fırsatların durumu",
+          "timeboxMin": 15,
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "mo-2",
+      "templateId": "m1",
+      "title": "Haftalık Yönetim Kurulu",
+      "category": "board",
+      "departmentId": null,
+      "participantIds": [
+        "u-tunc",
+        "u-murat",
+        "u-fatma",
+        "u-selin"
+      ],
+      "scheduledAt": "2026-06-29T09:00:00",
+      "status": "completed",
+      "ownerId": "u-tunc",
+      "createdBy": "u-tunc",
+      "notes": "Q3 hedefleri ve İK süreç güncellemesi görüşüldü.",
+      "agendaItems": [
+        {
+          "id": "ai-3",
+          "title": "Q3 hedef değerlendirmesi",
+          "timeboxMin": 30,
+          "order": 1
+        },
+        {
+          "id": "ai-4",
+          "title": "İK süreç güncellemesi",
+          "timeboxMin": 20,
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "meetingDecisions": [
+    {
+      "id": "md-1",
+      "occurrenceId": "mo-2",
+      "text": "Q3 hedefleri departman bazında revize edilecek.",
+      "ownerId": "u-murat",
+      "createdAt": "2026-06-29"
+    },
+    {
+      "id": "md-2",
+      "occurrenceId": "mo-2",
+      "text": "Yeni İK süreci Ağustos ayında devreye alınacak.",
+      "ownerId": "u-selin",
+      "createdAt": "2026-06-29"
+    }
+  ],
+  "kpiDefinitions": [
+    {
+      "id": "kpi-1",
+      "name": "Aylık Satış Cirosu",
+      "description": "Satış departmanının aylık toplam ciro hedefi.",
+      "unit": "TRY",
+      "direction": "higher_is_better",
+      "departmentId": "dep-satis",
+      "targetValue": 500000,
+      "warningThreshold": 400000,
+      "criticalThreshold": 300000,
+      "frequency": "monthly",
+      "status": "active"
+    },
+    {
+      "id": "kpi-2",
+      "name": "Müşteri Memnuniyeti",
+      "description": "Üç ayda bir yapılan müşteri memnuniyeti anketi sonucu.",
+      "unit": "%",
+      "direction": "higher_is_better",
+      "departmentId": null,
+      "targetValue": 90,
+      "warningThreshold": 80,
+      "criticalThreshold": 70,
+      "frequency": "quarterly",
+      "status": "active"
+    }
+  ],
+  "kpiValues": [
+    {
+      "id": "kpival-1",
+      "kpiDefinitionId": "kpi-1",
+      "period": "2026-05",
+      "actualValue": 420000,
+      "notes": "",
+      "enteredBy": "u-murat",
+      "enteredAt": "2026-06-01"
+    },
+    {
+      "id": "kpival-2",
+      "kpiDefinitionId": "kpi-1",
+      "period": "2026-06",
+      "actualValue": 380000,
+      "notes": "Yaz sezonu düşüşü.",
+      "enteredBy": "u-murat",
+      "enteredAt": "2026-07-01"
+    },
+    {
+      "id": "kpival-3",
+      "kpiDefinitionId": "kpi-2",
+      "period": "2026-Q2",
+      "actualValue": 88,
+      "notes": "",
+      "enteredBy": "u-tunc",
+      "enteredAt": "2026-07-01"
+    }
+  ],
+  "kpiAlerts": [
+    {
+      "id": "kal-1",
+      "kpiDefinitionId": "kpi-1",
+      "kpiValueId": "kpival-2",
+      "severity": "warning",
+      "createdAt": "2026-07-01"
+    }
+  ],
+  "goals": [
+    {
+      "id": "goal-1",
+      "title": "Q3 satış hedefini %10 artır",
+      "ownerId": "u-murat",
+      "departmentId": "dep-satis",
+      "targetDate": "2026-09-30",
+      "status": "on_track",
+      "checkIns": [
+        {
+          "id": "ci-1",
+          "date": "2026-07-01",
+          "note": "Temmuz başında hedefe uygun ilerliyoruz.",
+          "authorId": "u-murat"
+        }
+      ]
+    },
+    {
+      "id": "goal-2",
+      "title": "Şirket geneli müşteri memnuniyetini %90'a çıkar",
+      "ownerId": "u-tunc",
+      "departmentId": null,
+      "targetDate": "2026-12-31",
+      "status": "at_risk",
+      "checkIns": []
+    }
+  ],
+  "scorecards": [
+    {
+      "id": "sc-1",
+      "employeeId": "u-ahmet",
+      "reviewerId": "u-murat",
+      "period": "2026-Q2",
+      "status": "in_progress",
+      "qualitativeNotes": "",
+      "selfAssessment": ""
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc-1",
+      "title": "Satış Teklif Şablonu",
+      "category": "template",
+      "departmentId": "dep-satis",
+      "ownerId": "u-murat",
+      "body": "Müşteri adı:\nTeklif tarihi:\nÜrün/hizmet kalemleri:\nToplam tutar:\nGeçerlilik süresi: 30 gün",
+      "versions": [
+        {
+          "versionNumber": 1,
+          "body": "Müşteri adı:\nTeklif tarihi:\nÜrün/hizmet kalemleri:\nToplam tutar:\nGeçerlilik süresi: 30 gün",
+          "note": "İlk sürüm",
+          "updatedBy": "u-murat",
+          "updatedAt": "2026-05-10"
+        }
+      ],
+      "updatedAt": "2026-05-10"
+    },
+    {
+      "id": "doc-2",
+      "title": "Aylık Operasyon Raporu — Haziran",
+      "category": "report",
+      "departmentId": "dep-operasyon",
+      "ownerId": "u-fatma",
+      "body": "Haziran ayında operasyon departmanı hedeflerin %94'ünü tamamladı. Ana gecikme nedeni tedarikçi teslimat sürelerindeki artış oldu.",
+      "versions": [
+        {
+          "versionNumber": 1,
+          "body": "Haziran ayında operasyon departmanı hedeflerin %94'ünü tamamladı. Ana gecikme nedeni tedarikçi teslimat sürelerindeki artış oldu.",
+          "note": "İlk sürüm",
+          "updatedBy": "u-fatma",
+          "updatedAt": "2026-06-30"
+        }
+      ],
+      "updatedAt": "2026-06-30"
+    },
+    {
+      "id": "doc-3",
+      "title": "Yeni Çalışan Oryantasyon Rehberi",
+      "category": "reference",
+      "departmentId": null,
+      "ownerId": "u-selin",
+      "body": "1. İlk gün şirket tanıtımı\n2. Departman yöneticisiyle tanışma\n3. Sistem erişimlerinin tanımlanması\n4. İlk hafta hedeflerinin belirlenmesi",
+      "versions": [
+        {
+          "versionNumber": 1,
+          "body": "1. İlk gün şirket tanıtımı\n2. Departman yöneticisiyle tanışma\n3. Sistem erişimlerinin tanımlanması",
+          "note": "İlk sürüm",
+          "updatedBy": "u-selin",
+          "updatedAt": "2026-04-02"
+        },
+        {
+          "versionNumber": 2,
+          "body": "1. İlk gün şirket tanıtımı\n2. Departman yöneticisiyle tanışma\n3. Sistem erişimlerinin tanımlanması\n4. İlk hafta hedeflerinin belirlenmesi",
+          "note": "4. madde eklendi",
+          "updatedBy": "u-selin",
+          "updatedAt": "2026-06-15"
+        }
+      ],
+      "updatedAt": "2026-06-15"
+    }
+  ],
+  "policies": [
+    {
+      "id": "pol-1",
+      "title": "İndirim Onay Politikası",
+      "category": "operational",
+      "body": "Satış temsilcileri %5'e kadar indirim uygulayabilir. %5 üzeri indirimler departman müdürü onayına tabidir. %15 üzeri indirimler Patron onayı gerektirir.",
+      "effectiveDate": "2026-01-01",
+      "ownerId": "u-murat",
+      "status": "active",
+      "source": "manual",
+      "sourceId": null,
+      "versions": [
+        {
+          "versionNumber": 1,
+          "body": "Satış temsilcileri %5'e kadar indirim uygulayabilir. %5 üzeri indirimler departman müdürü onayına tabidir. %15 üzeri indirimler Patron onayı gerektirir.",
+          "note": "İlk sürüm",
+          "updatedBy": "u-murat",
+          "updatedAt": "2026-01-01"
+        }
+      ],
+      "updatedAt": "2026-01-01"
+    },
+    {
+      "id": "pol-2",
+      "title": "Uzaktan Çalışma Taslağı",
+      "category": "hr",
+      "body": "Haftada en fazla 2 gün uzaktan çalışma talep edilebilir; departman müdürünün onayı gereklidir.",
+      "effectiveDate": "2026-08-01",
+      "ownerId": "u-selin",
+      "status": "draft",
+      "source": "manual",
+      "sourceId": null,
+      "versions": [
+        {
+          "versionNumber": 1,
+          "body": "Haftada en fazla 2 gün uzaktan çalışma talep edilebilir; departman müdürünün onayı gereklidir.",
+          "note": "İlk taslak",
+          "updatedBy": "u-selin",
+          "updatedAt": "2026-06-20"
+        }
+      ],
+      "updatedAt": "2026-06-20"
+    }
+  ],
+  "handbookSections": [
+    {
+      "id": "hb-about",
+      "key": "about",
+      "title": "Şirket Hakkında",
+      "body": "Örnek Aile Şirketi A.Ş., aile üyeleri tarafından yönetilen ve satış, operasyon ve insan kaynakları departmanlarından oluşan bir aile şirketidir.",
+      "updatedAt": "2026-03-01",
+      "updatedBy": "u-tunc"
+    },
+    {
+      "id": "hb-org-structure",
+      "key": "org_structure",
+      "title": "Organizasyon Yapımız",
+      "body": "Şirketimiz Patron, departman müdürleri ve çalışanlardan oluşan üç kademeli bir yapıya sahiptir. Her departmanın bir müdürü ve o müdüre bağlı çalışanları vardır.",
+      "updatedAt": "2026-03-01",
+      "updatedBy": "u-tunc"
+    },
+    {
+      "id": "hb-how-we-work",
+      "key": "how_we_work",
+      "title": "Nasıl Çalışırız",
+      "body": "Haftalık departman toplantıları ve aylık yönetim kurulu toplantıları ile şirket ritmini sürdürürüz. Kararlar toplantılarda kayıt altına alınır ve takip edilir.",
+      "updatedAt": "2026-03-01",
+      "updatedBy": "u-tunc"
+    },
+    {
+      "id": "hb-policies",
+      "key": "policies",
+      "title": "Politikalarımız",
+      "body": "Güncel şirket politikalarının tam listesi Politika Merkezi'nde yer alır. Bu bölüm politika kültürümüze genel bir bakış sunar.",
+      "updatedAt": "2026-03-01",
+      "updatedBy": "u-tunc"
+    },
+    {
+      "id": "hb-standards",
+      "key": "standards",
+      "title": "Standartlarımız",
+      "body": "Müşteri iletişiminde profesyonellik, raporlamada zamanındalık ve ekip içi şeffaflık temel standartlarımızdır.",
+      "updatedAt": "2026-03-01",
+      "updatedBy": "u-tunc"
+    }
+  ],
+  "meetingSummaries": [
+    {
+      "id": "ms-1",
+      "occurrenceId": "mo-2",
+      "keyPoints": [
+        "Q3 hedef değerlendirmesi",
+        "İK süreç güncellemesi"
+      ],
+      "decisionIds": [
+        "md-1",
+        "md-2"
+      ],
+      "actionItemIds": [
+        "t4"
+      ],
+      "status": "approved",
+      "generatedAt": "2026-06-29T09:45:00",
+      "approvedBy": "u-tunc",
+      "approvedAt": "2026-06-29T10:00:00"
+    }
+  ],
+  "dismissedInsightIds": [],
+  "healthBriefs": [],
+  "assistantQueries": [],
+  "aiSettings": {
+    "llmProvider": "anthropic",
+    "featuresEnabled": {
+      "insights": true,
+      "suggestedActions": true,
+      "roleProfileDrafter": true,
+      "executiveAssistant": true,
+      "healthBrief": true
+    }
+  }
+}

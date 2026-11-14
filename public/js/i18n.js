@@ -1329,6 +1329,7 @@ function applyStaticTranslations() {
 function setLang(lang) {
   state.lang = lang;
   applyStaticTranslations();
+  if (typeof configureDemoLogin === 'function') configureDemoLogin();
   persistState();
   if (state.currentUserId) window.renderShell();
 }

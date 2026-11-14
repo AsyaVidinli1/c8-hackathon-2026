@@ -207,11 +207,21 @@ window.regenerateHealthBrief = regenerateHealthBrief;
 window.applyRoleProfileDraft = applyRoleProfileDraft;
 window.toggleAiFeature = toggleAiFeature;
 
-initModal();
-loadState();
-applyStaticTranslations();
-if (state.currentUserId && state.users.find(function (u) { return u.id === state.currentUserId; })) {
-  document.getElementById("login-screen").style.display = "none";
-  document.getElementById("app-shell").style.display = "block";
-  renderShell();
+async function bootApplication() {
+  initModal();
+  await loadState();
+  applyStaticTranslations();
+  configureDemoLogin();
+  if (state.currentUserId && getCurrentUser()) {
+    document.getElementById("login-screen").style.display = "none";
+    document.getElementById("app-shell").style.display = "block";
+    renderShell();
+  }
 }
+function configureDemoLogin() {
+  document.getElementById("login-password").style.display = "none";
+  var labels = document.querySelectorAll("#login-screen .field-label");
+  if (labels[1]) labels[1].style.display = "none";
+  document.querySelector("#login-screen .btn-primary").textContent = state.lang === "tr" ? "Demo hesabını aç" : "Open demo account";
+}
+bootApplication().catch(function () { backendNotice("Application could not connect to the backend.", true); });
