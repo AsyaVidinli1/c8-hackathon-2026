@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veliaht Akademi — Yönetim Sistemi</title>
+<link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+
+<!-- ============ LOGIN ============ -->
+<div id="login-screen">
+  <div class="login-lang-wrap">
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="tr" onclick="setLang('tr')">TR</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+  <div class="login-card">
+    <div class="crest">VA</div>
+    <div class="login-title" data-i18n="login_title">Hoş geldiniz</div>
+    <div class="login-sub" data-i18n="login_sub">Şirket yönetim sistemine giriş yapın</div>
+
+    <label class="field-label" data-i18n="email_label">E-posta</label>
+    <input class="text-input" id="login-email" type="email" data-i18n-placeholder="email_placeholder" placeholder="ornek@sirket.com">
+    <label class="field-label" data-i18n="password_label">Şifre</label>
+    <input class="text-input" id="login-password" type="password" placeholder="••••••••">
+    <div class="login-error" id="login-error" data-i18n="login_error">E-posta veya şifre hatalı.</div>
+    <button class="btn-primary" onclick="handleLogin()" data-i18n="login_btn">Giriş yap</button>
+
+    <div class="demo-divider" data-i18n="demo_divider">test hesapları</div>
+    <button class="demo-btn" onclick="quickLogin('tunc@veliahtakademi.com')"><b>Tunç Vidinli</b><span class="demo-role-tag" data-i18n="role_patron">Patron</span><br><span class="dim-text" data-i18n="demo_patron_desc">Şirket sahibi görünümü</span></button>
+    <button class="demo-btn" onclick="quickLogin('murat@ornekfirma.com')"><b>Murat Çelik</b><span class="demo-role-tag" data-i18n="role_mudur">Genel Müdür</span><br><span class="dim-text" data-i18n="demo_gm_desc">Satış departmanı yöneticisi</span></button>
+    <button class="demo-btn" onclick="quickLogin('ahmet@ornekfirma.com')"><b>Ahmet Yıldız</b><span class="demo-role-tag" data-i18n="role_calisan">Çalışan</span><br><span class="dim-text" data-i18n="demo_emp_desc">Satış temsilcisi</span></button>
+  </div>
+</div>
+
+<!-- ============ APP SHELL ============ -->
+<div id="app-shell">
+  <div class="topbar">
+    <div class="topbar-left"><div class="crest">VA</div> <span data-i18n="app_title">Veliaht Akademi — Yönetim Sistemi</span></div>
+    <div class="topbar-right">
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="tr" onclick="setLang('tr')">TR</button>
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      </div>
+      <div class="topbar-user"><b id="tb-name"></b><span class="topbar-role" id="tb-role"></span></div>
+      <button class="logout-btn" onclick="handleLogout()" data-i18n="logout">Çıkış</button>
+    </div>
+  </div>
+  <div class="layout">
+    <div class="sidebar" id="sidebar-nav"></div>
+    <div class="main" id="main-content"></div>
+  </div>
+</div>
+
+<!-- ============ MODAL ROOT ============ -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="modal-body"></div>
+</div>
+
+<script src="./js/state.js"></script>
+<script src="./js/storage.js"></script>
+<script src="./js/i18n.js"></script>
+<script src="./js/auth.js"></script>
+<script src="./js/helpers.js"></script>
+<script src="./js/modal.js"></script>
+<script src="./js/render/dashboard.js"></script>
+<script src="./js/render/departments.js"></script>
+<script src="./js/render/employees.js"></script>
+<script src="./js/render/meetings.js"></script>
+<script src="./js/render/execution.js"></script>
+<script src="./js/render/performance.js"></script>
+<script src="./js/render/roleCards.js"></script>
+<script src="./js/render/settings.js"></script>
+<script src="./js/render/knowledge.js"></script>
+<script src="./js/render/aiAdvisor.js"></script>
+<script src="./app.js"></script>
+
+</body>
+</html>
